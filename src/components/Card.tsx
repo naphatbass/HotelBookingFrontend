@@ -32,6 +32,7 @@ export default function Card({ vanueName, imgSrc, onRatingChange }: { vanueName:
                         <Rating
                             value={ratingValue}
                             onChange={handleRatingChange}
+                            id={'{vanueName} Rating'}
                         />
                     </div>
                 </div>
