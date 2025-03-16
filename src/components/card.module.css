@@ -1,0 +1,23 @@
+div.card {
+    width: 400px;
+    height: 600px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    padding-top: 10px;
+}
+
+div.cardimg{
+    width:90%;
+    height:70%;
+    position:relative;
+    margin: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div.cardtext{
+    padding:5px;
+    height: 25%;
+    margin: 20px;
+}
