@@ -6,12 +6,11 @@ import InteractiveCard from './InteractiveCard';
 import { Rating } from '@mui/material';
 import { useState } from 'react';
 
-export default function Card({ vanueName, imgSrc, onRatingChange }: { vanueName: string, imgSrc: string, onRatingChange: Function }) {
+export default function Card({ hotelName, address, district, province, tel, imgSrc }: { hotelName: string, address : string, district : string, province : string, tel : string, imgSrc: string }) {
     const [ratingValue, setRatingValue] = useState<number | null>(0);
 
     const handleRatingChange = (event: React.ChangeEvent<{}>, newValue: number | null) => {
-        setRatingValue(newValue); // Update the local rating state
-        onRatingChange(vanueName, newValue?.toString() || "0"); // Pass the rating to parent component
+        setRatingValue(newValue);
     };
 
     return(
@@ -24,16 +23,15 @@ export default function Card({ vanueName, imgSrc, onRatingChange }: { vanueName:
                     objectFit="cover" />
                 </div>
                 <div className={styles.cardtext}>
-                    <h2 className='text-lg'>{vanueName}</h2>
-                    <p className='text-sm'>{vanueName}</p>
-                    <p className='text-transparent'>The Bloom Pavilion</p>
-                    <p className='text-xs'>Exclusive place available for your greatest memory</p>
+                    <h2 className='text-lg'>{hotelName}</h2>
+                    <p className='text-sm pt-1'>{address} {district} {province}</p>
+                    <p className='text-xs pt-1'>{tel}</p>
                     <div className='pt-5'>
-                        <Rating
+                        {/* <Rating
                             value={ratingValue}
                             onChange={handleRatingChange}
-                            id={'{vanueName} Rating'}
-                        />
+                            id={'{hotelName} Rating'}
+                        /> */}
                     </div>
                 </div>
             </div>

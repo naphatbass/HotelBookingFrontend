@@ -16,9 +16,9 @@
     color: rgb(0, 0, 0);
     font-family: 'Roboto', sans-serif;
     /* border color */
-    border: 2px solid rgb(199, 233, 255);
+    border: 5px solid rgb(255, 255, 255);
     border-radius: 10px;
     /* bg-color opacity */
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
 }
