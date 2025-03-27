@@ -1,6 +1,6 @@
 export default async function postBooking( token : string, bookingDate: string, checkoutDate: string, hotelId: string ) {
 
-    const response = await fetch(`http://localhost:5000/api/v1/hotels/${hotelId}/bookings`, {
+    const response = await fetch(`${process.env.BACKEND_URL}/api/v1/hotels/${hotelId}/bookings`, {
         method: 'POST',
         headers: {
             authorization: `Bearer ${token}`,
